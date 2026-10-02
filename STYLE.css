@@ -1,0 +1,528 @@
+/* ============================== */
+/* CONFIGURACIÓN GENERAL          */
+/* ============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+
+/* ============================== */
+/* CABECERA                       */
+/* ============================== */
+
+header {
+    background: #020617;
+    color: white;
+
+    padding: 20px;
+}
+
+.header-content {
+    max-width: 1000px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.car-icon {
+    background: #2563eb;
+
+    border-radius: 12px;
+
+    padding: 10px;
+
+    font-size: 22px;
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+}
+
+header p {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+
+/* ============================== */
+/* CONTENIDO PRINCIPAL            */
+/* ============================== */
+
+main {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 28px 16px;
+
+    display: grid;
+
+    grid-template-columns:
+        370px 1fr;
+
+    gap: 24px;
+}
+
+
+/* ============================== */
+/* TARJETAS                       */
+/* ============================== */
+
+.card {
+
+    background: white;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+
+/* ============================== */
+/* FORMULARIO                     */
+/* ============================== */
+
+.field {
+    margin-bottom: 18px;
+}
+
+label,
+.field-title {
+
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+/* INPUTS */
+
+input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border:
+        1px solid #cbd5e1;
+
+    border-radius: 11px;
+
+    font-size: 16px;
+
+    margin-top: 6px;
+
+    background: white;
+}
+
+
+/* Cuando seleccionamos un input */
+
+input:focus {
+
+    outline: none;
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* ============================== */
+/* SELECCIÓN DE COCHES            */
+/* ============================== */
+
+.cars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+
+.car-button {
+    padding: 12px;
+
+    border: 2px solid #e2e8f0;
+    border-radius: 11px;
+
+    background: white;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.car-button:hover {
+    border-color: #94a3b8;
+}
+
+
+.car-button.active {
+    border-color: #2563eb;
+    background: #eff6ff;
+    color: #1e40af;
+}
+
+
+.dot {
+    width: 10px;
+    height: 10px;
+
+    display: inline-block;
+
+    border-radius: 50%;
+
+    margin-right: 7px;
+}
+
+
+
+
+/* Puntito de color */
+
+.dot {
+
+    width: 10px;
+    height: 10px;
+
+    display: inline-block;
+
+    border-radius: 50%;
+
+    margin-right: 7px;
+}
+
+
+/* ============================== */
+/* HORARIOS                       */
+/* ============================== */
+
+.times {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 12px;
+}
+
+
+/* ============================== */
+/* BOTÓN RESERVAR                 */
+/* ============================== */
+
+.reserve {
+
+    width: 100%;
+
+    border: 0;
+
+    border-radius: 11px;
+
+    padding: 13px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+
+.reserve:hover {
+    background: #1d4ed8;
+}
+
+
+.reserve:active {
+    transform: scale(0.99);
+}
+
+
+/* ============================== */
+/* MENSAJES                       */
+/* ============================== */
+
+#message {
+
+    margin:
+        14px 0 0;
+
+    padding: 11px;
+
+    border-radius: 10px;
+
+    display: none;
+
+    font-size: 14px;
+}
+
+
+/* Reserva correcta */
+
+.success {
+
+    display: block !important;
+
+    background: #ecfdf5;
+
+    color: #047857;
+}
+
+
+/* Error */
+
+.error {
+
+    display: block !important;
+
+    background: #fef2f2;
+
+    color: #b91c1c;
+}
+
+
+/* ============================== */
+/* AGENDA                         */
+/* ============================== */
+
+.agenda-heading {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items: end;
+
+    gap: 15px;
+
+    margin-bottom: 14px;
+}
+
+
+.agenda-heading h2 {
+    margin: 0;
+}
+
+
+.agenda-label {
+
+    margin:
+        0 0 5px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+.date-label {
+
+    background: white;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 9px;
+
+    padding: 9px;
+
+    font-size: 13px;
+}
+
+
+/* ============================== */
+/* RESERVA INDIVIDUAL             */
+/* ============================== */
+
+.booking {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    background: white;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+    margin-bottom: 10px;
+
+    box-shadow:
+        0 2px 6px rgba(15, 23, 42, 0.03);
+}
+
+
+/* Barra de color del coche */
+
+.booking-color {
+
+    width: 11px;
+    height: 48px;
+
+    border-radius: 8px;
+
+    flex-shrink: 0;
+}
+
+
+/* Información */
+
+.booking-info {
+    flex: 1;
+}
+
+
+.booking-info strong {
+    display: block;
+
+    margin-bottom: 4px;
+}
+
+
+.booking-info span {
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* Hora */
+
+.booking-time {
+
+    background: #f1f5f9;
+
+    border-radius: 10px;
+
+    padding: 9px;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+
+/* ============================== */
+/* SIN RESERVAS                   */
+/* ============================== */
+
+.empty {
+
+    background: white;
+
+    border:
+        1px solid #e2e8f0;
+
+    padding: 38px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    color: #64748b;
+}
+
+
+/* ============================== */
+/* MÓVIL                          */
+/* ============================== */
+
+@media (max-width: 750px) {
+
+    main {
+
+        grid-template-columns: 1fr;
+
+        padding:
+            18px 12px;
+    }
+
+
+    header {
+        padding: 16px;
+    }
+
+
+    header h1 {
+        font-size: 20px;
+    }
+
+}
+
+
+/* MÓVILES MUY PEQUEÑOS */
+
+@media (max-width: 420px) {
+
+    .cars {
+        grid-template-columns: 1fr;
+    }
+
+
+    .booking {
+        gap: 10px;
+    }
+
+
+    .booking-time {
+        font-size: 12px;
+    }
+
+}

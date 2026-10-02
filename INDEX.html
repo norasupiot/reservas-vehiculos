@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+```
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Sistema de reserva de vehículos de empresa"
+>
+
+<title>Reserva de vehículos</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+```
+<!-- ============================== -->
+<!-- CABECERA                       -->
+<!-- ============================== -->
+
+<header>
+    <div class="header-content">
+
+        <div class="car-icon" aria-hidden="true">
+            🚗
+        </div>
+
+        <div>
+            <h1>Reserva de vehículos</h1>
+
+            <p>
+                Flota de empresa · 4 vehículos
+            </p>
+        </div>
+
+    </div>
+</header>
+
+
+<!-- ============================== -->
+<!-- CONTENIDO PRINCIPAL            -->
+<!-- ============================== -->
+
+<main>
+
+    <!-- ========================== -->
+    <!-- NUEVA RESERVA              -->
+    <!-- ========================== -->
+
+    <section class="card">
+
+        <h2>Nueva reserva</h2>
+
+        <form id="reservationForm">
+
+            <!-- EMPLEADO -->
+
+            <div class="field">
+
+                <label for="employee">
+                    👤 Empleado
+                </label>
+
+                <input
+                    id="employee"
+                    name="employee"
+                    type="text"
+                    placeholder="Nombre y apellidos"
+                    autocomplete="name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- FECHA -->
+
+            <div class="field">
+
+                <label for="date">
+                    📅 Fecha
+                </label>
+
+                <input
+                    id="date"
+                    name="date"
+                    type="date"
+                    required
+                >
+
+            </div>
+
+
+            <!-- VEHÍCULO -->
+
+            
+   <div class="field">
+    <div class="field-title">
+        Vehículo
+    </div>
+
+    <div class="cars" id="cars"></div>
+</div>
+    <input
+        type="hidden"
+        id="vehicle"
+        name="vehicle"
+        required
+    >
+
+</div>
+
+
+            <!-- HORARIO -->
+
+            <div class="times field">
+
+                <!-- HORA INICIO -->
+
+                <label for="start">
+
+                    🕐 Desde
+
+                    <input
+                        id="start"
+                        name="start"
+                        type="time"
+                        value="08:00"
+                        required
+                    >
+
+                </label>
+
+
+                <!-- HORA FINAL -->
+
+                <label for="end">
+
+                    🕐 Hasta
+
+                    <input
+                        id="end"
+                        name="end"
+                        type="time"
+                        value="10:00"
+                        required
+                    >
+
+                </label>
+
+            </div>
+
+
+            <!-- BOTÓN RESERVAR -->
+
+            <button
+                class="reserve"
+                type="submit"
+            >
+                Reservar coche
+            </button>
+
+
+            <!-- MENSAJES -->
+
+            <p
+                id="message"
+                role="status"
+                aria-live="polite"
+            ></p>
+
+        </form>
+
+    </section>
+
+
+    <!-- ========================== -->
+    <!-- AGENDA                     -->
+    <!-- ========================== -->
+
+    <section>
+
+        <div class="agenda-heading">
+
+            <div>
+
+                <p class="agenda-label">
+                    Agenda
+                </p>
+
+                <h2>
+                    Reservas del día
+                </h2>
+
+            </div>
+
+
+            <!-- Fecha seleccionada -->
+
+            <span
+                class="date-label"
+                id="selectedDate"
+            ></span>
+
+        </div>
+
+
+        <!--
+            JavaScript mostrará aquí
+            las reservas existentes.
+        -->
+
+        <div id="bookings"></div>
+
+    </section>
+
+</main>
+
+
+<!-- ============================== -->
+<!-- SUPABASE                       -->
+<!-- ============================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+></script>
+
+
+<!-- ============================== -->
+<!-- JAVASCRIPT DE LA APLICACIÓN    -->
+<!-- ============================== -->
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>
